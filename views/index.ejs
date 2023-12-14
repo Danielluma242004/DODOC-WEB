@@ -1,0 +1,133 @@
+<%-include("header.ejs")%>
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center mb-5 mb-md-0">
+        <img class="img-fluid" src="images/inicio.png" alt="" />
+      </div>
+      <div class="col-md-6 align-self-center text-center text-md-left">
+        <div class="block">
+
+          <% if (locals.actualizadoData !== '') {%>
+            <label class="font-weight-bold mb-4 font-size-60"><%-actualizadoData%></label>
+          <%} else {%>
+            <label class="font-weight-bold mb-4 font-size-60">¡Explora la Revolución de la Computación Cuántica!</label>
+          <%} %>
+
+          <% if (locals.nameUser==="Administrador") {%>
+            <form class="d-flex flex-column mb-3" id="actualInfo" action="/actualizar" method="post">
+              <textarea class="p-2 mb-3" name="titulo1" required rows="1" placeholder="Ingrese Nuevo Texto"></textarea>
+              <button class="btn-primary" type="submit">Enviar</button>
+            </form>
+          <%} %>
+
+          <% if (locals.actualizadoData1 !== '') {%>
+            <p class="mb-4"><%-actualizadoData1%></p>
+          <%} else {%>
+            <p class="mb-4">
+              Entra en un mundo donde las reglas de la informática tradicional
+              se reescriben. Descubre cómo los qubits, las superposiciones y
+              la entrelazación cuántica están dando forma al futuro de la
+              tecnología. Prepárate para un emocionante viaje hacia un nuevo
+              paradigma computacional.
+            </p>
+          <%} %>
+
+          <% if (locals.nameUser==="Administrador") {%>
+            <form class="d-flex flex-column mb-3" id="actualInfo" action="/actualizar1" method="post">
+              <textarea class="p-2 mb-3" name="titulo2" required rows="1" placeholder="Ingrese Nuevo Texto"></textarea>
+              <button class="btn-primary" type="submit">Enviar</button>
+            </form>
+          <%} %>
+
+          <a href="introduccion" class="btn btn-main">Introducción</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-orange section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center mb-5 mb-lg-0">
+        <img class="img-fluid" src="images/computadora.png" alt="" />
+      </div>
+      <div class="col-md-6 align-self-center text-center text-md-left">
+        <div class="content">
+          <h2 class="subheading text-white font-weight-bold mb-10">
+            Resuelve Problemas Impensables
+          </h2>
+          <p class="text-white">
+            ¿Alguna vez te has preguntado cómo se podrían resolver problemas
+            que desafían a las computadoras convencionales? Aprende cómo la
+            computación cuántica está desbloqueando capacidades
+            sorprendentes para abordar desafíos en campos como la
+            criptografía, la optimización y la simulación. ¡La revolución ha
+            comenzado!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-list section">
+  <div class="container">
+    <div class="row mb-40">
+      <div
+        class="col-md-6 order-md-1 order-2 align-self-center text-center text-md-left"
+      >
+        <div class="content">
+          <h4 class="subheading">La Carrera Cuántica</h4>
+          <p>
+            Las principales empresas tecnológicas, así como los institutos
+            de investigación líderes, están compitiendo en la carrera por
+            alcanzar la supremacía cuántica. Descubre quiénes están a la
+            vanguardia de la investigación y el desarrollo de hardware y
+            software cuántico. Explora cómo los gigantes tecnológicos están
+            invirtiendo en la computación cuántica y cómo esto está
+            impactando en diferentes sectores industriales. Conoce las
+            oportunidades laborales y de negocio que este campo en rápido
+            crecimiento ofrece.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 order-md-2 order-1 text-center mb-5 mb-lg-0">
+        <img
+          class="img-fluid"
+          src="images/comp1.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="row mb-40">
+      <div class="col-md-6 text-center mb-5 mb-lg-0">
+        <img
+          class="img-fluid"
+          src="images/comp1.png"
+          alt=""
+        />
+      </div>
+      <div class="col-md-6 align-self-center text-center text-md-left">
+        <div class="content">
+          <h4 class="subheading">Privacidad y Seguridad Cuántica</h4>
+          <p>
+            La computación cuántica no solo está redefiniendo la potencia de
+            cálculo, sino que también está planteando desafíos y soluciones
+            innovadoras en el ámbito de la seguridad de la información.
+            Explora cómo la criptografía cuántica promete un nivel de
+            privacidad sin precedentes, haciendo que la interceptación de
+            datos sea prácticamente imposible. Aprende sobre las
+            aplicaciones de seguridad cuántica y cómo están protegiendo
+            nuestras comunicaciones y datos en un mundo cada vez más
+            digitalizado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%-include("footer.ejs") %>

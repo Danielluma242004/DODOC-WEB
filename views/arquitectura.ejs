@@ -1,0 +1,31 @@
+<%-include("header.ejs")%>
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mb-4 mb-md-0">
+        <div class="sticky-image">
+          <img class="img-fluid w-100" src="images/qubit.png" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-7 offset-lg-1">
+        <h1 class="mb-4">Arquitectura De Un Ordenador Cuántico</h1>
+        <div class="content">
+          <p>La arquitectura de un ordenador cuántico es fundamental para entender cómo se realiza el procesamiento cuántico y cómo se aprovechan los principios de la mecánica cuántica. Aquí se describen los componentes clave de la arquitectura de un ordenador cuántico:</p>
+          <p><br><b>1. Qubits (Bits Cuánticos)</b></p>
+          <p>Los qubits son los componentes fundamentales de un ordenador cuántico. Estos qubits son análogos a los bits en la computación clásica y se utilizan para representar y procesar información. A diferencia de los bits clásicos, los qubits pueden estar en estados de superposición, lo que significa que pueden representar simultáneamente 0 y 1. Los qubits pueden implementarse utilizando varias tecnologías, como superconductores, iones atrapados, fotones, entre otras.</p>
+          <p><br><b>2. Puertas Cuánticas</b></p>
+          <p>Las puertas cuánticas son las operaciones lógicas que se aplican a los qubits para realizar cálculos y manipulaciones cuánticas. Cada puerta cuántica realiza una función específica, como la inversión de un qubit (puerta NOT cuántica), la entrelazación de dos qubits (puerta CNOT), o la creación de superposición (puerta Hadamard). Las puertas cuánticas son esenciales para la ejecución de algoritmos cuánticos y la realización de tareas específicas.</p>
+          <p><br><b>3. Quantum Gates</b></p>
+          <p>Los Quantum Gates son operaciones cuánticas que actúan sobre los qubits y permiten la realización de cálculos cuánticos. Cada Quantum Gate tiene una función única y es responsable de realizar transformaciones específicas en los qubits. Algunos ejemplos incluyen las puertas X, Y, Z, Hadamard, y la puerta T, entre otras. La elección de las puertas cuánticas y su secuencia es crucial para el diseño de algoritmos cuánticos efectivos.</p>
+          <p><br><b>4. Lectura y Medición</b></p>
+          <p>Al final de una serie de operaciones cuánticas, se realiza la medición de los qubits. La medición colapsa el estado cuántico del qubit en uno de los dos posibles valores, 0 o 1, con probabilidades determinadas por las amplitudes de probabilidad en su estado de superposición. La medición es lo que produce el resultado final de un cálculo cuántico.</p>
+          <p><br><b>5. Refrigeración y Aislamiento</b></p>
+          <p>Los qubits cuánticos son extremadamente sensibles al entorno y al ruido. Por lo tanto, los ordenadores cuánticos deben operar a temperaturas cercanas al cero absoluto (fracción de grados Kelvin) para reducir la interferencia térmica. Además, se utilizan sistemas de aislamiento para minimizar la influencia de factores externos, como campos electromagnéticos, vibraciones y radiación, que pueden afectar la coherencia cuántica de los qubits.</p>
+          <p><br><b>6. Control y Lectura de Qubits</b></p>
+          <p>La manipulación y lectura de los qubits son controladas por sistemas electrónicos y software especializados. Estos sistemas permiten la aplicación precisa de las puertas cuánticas, la monitorización de los qubits y la realización de operaciones de medición. La eficacia y precisión de estos sistemas son cruciales para el funcionamiento de un ordenador cuántico.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%-include("footer.ejs") %>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Computación Cuantica</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Droid&#43;Serif:400%7cJosefin&#43;Sans:300,400,600,700 "
+    />
+    <link rel="stylesheet" href="styles/bootstrap.min.css " />
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+
+  <body id="body">
+    <header class="navigation sticky-top bg-white">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="/">
+            <img src="images/logo.png" alt="dodoc" width="120px" />
+          </a>
+          <button
+            class="navbar-toggler p-0 border-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navigation"
+            aria-controls="navigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-center" id="navigation">
+            <ul class="navbar-nav ml-auto mr-n0 mr-md-n3">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Inicio</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="introduccion">Introducción</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="comoFunciona">¿Cómo funciona?</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#!"
+                  id="dropdown03"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Usos <i class="tf-ion-chevron-down"></i
+                ></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                  <li>
+                    <a class="dropdown-item" href="criptografia"
+                      >Criptografía</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="optimizacion"
+                      >Optimización</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="simulacion"
+                      >Simulación</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contacto"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+
+                <% if (locals.nameUser ===0){%>
+                  <div class="dropdown">
+                    <a type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                      Login</a>
+                      <div class="dropdown-menu">
+                        <form action="/login" method="post" class="px-4 py-3">
+                          <div class="mb-3">
+                            <label for="exampleDropdownFormEmail1" class="form-label">Correo Electrónico</label>
+                            <input type="email" name="loginEmail" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@ejemplo.com">
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleDropdownFormPassword1" class="form-label">Constraseña</label>
+                            <input type="password" name="loginPassword" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                          </div>
+                          <button type="submit" class="btn bg-orange">Login</button>
+                       </form>
+                       <div class="dropdown-divider"></div>
+                          <a class="dropdown-item text-center" href="register">Registrarte</a>
+                      </div>
+                   </div>
+                   <%} else{%>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle bg-orange" href="#!" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%-nameUser%> 
+                        <i class="tf-ion-chevron-down"></i>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                        <li>
+                          <a class="dropdown-item" href="LogOut">LogOut</a>
+                        </li>
+                      </ul>
+                    </li>
+                  <% } %>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>

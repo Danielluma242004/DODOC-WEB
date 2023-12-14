@@ -1,0 +1,38 @@
+<%-include("header.ejs")%>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 mb-4 mb-md-0">
+            <div class="sticky-image">
+              <img class="img-fluid w-100" src="images/computadoracuantica.png" alt="How to choose right watch for you.">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-7 offset-lg-1">
+            <h1 class="mb-4">¿Qué es la Computación Cuántica</h1>
+            <div class="content">
+              <% if (locals.actualizadoData2 !== '') {%>
+                <p><%-actualizadoData2%></p>
+              <%} else {%>
+                <p>La computación cuántica, en el corazón de la revolución tecnológica actual, representa un salto cualitativo en la capacidad de procesamiento de información.
+                  <br>A diferencia de la computación clásica, que se basa en bits que pueden representar un estado de 0 o 1, la computación cuántica aprovecha la extraña y poderosa naturaleza de los qubits, unidades de información cuántica, que pueden existir en múltiples estados a la vez gracias a la superposición cuántica. Esta característica fundamental permite a las computadoras cuánticas realizar cálculos masivamente paralelos y resolver problemas complejos de manera exponencialmente más rápida que las computadoras tradicionales.
+                  <br>Además, la entrelazación cuántica, que permite la correlación instantánea entre qubits a través de grandes distancias, ofrece la promesa de comunicaciones y criptografía ultra seguras. La computación cuántica, con su capacidad para abordar desafíos previamente insuperables en campos como la optimización, la simulación y la inteligencia artificial, está destinada a transformar industrias enteras y revolucionar la forma en que abordamos problemas fundamentales en la ciencia y la tecnología.
+                </p>
+              <%} %>
+    
+              <% if (locals.nameUser==="Administrador") {%>
+                <form class="d-flex flex-column mb-3" id="actualInfo" action="/actualizar2" method="post">
+                  <textarea class="p-2 mb-3" name="titulo3" required rows="1" placeholder="Ingrese Nuevo Texto"></textarea>
+                  <button class="btn-primary" type="submit">Enviar</button>
+                </form>
+              <%} %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <%-include("footer.ejs") %>

@@ -1,0 +1,81 @@
+<%-include("header.ejs")%>
+<section class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-lg-5 col-sm-6 mb-5">
+          <h2 class="font-weight-bold mb-4">CONTÁCTATE CON NOSOTROS</h2>
+          <p>Universidad Autónoma de Nuevo León.</p>
+          <ul class="list-unstyled contact-list">
+            <li class="mb-3"><a href="tel:528130539856"><i class="tf-ion-ios-telephone mr-2"></i>
+              +52 8130539856</a></li>
+            <li class="mb-3"><a href="mailto:contactouni@uanl.mx"><i class="tf-ion-email mr-2"></i>contactouni@uanl.mx</a></li>
+            <li class="mb-3"><i class="tf-ion-ios-location mr-2"></i> Alfonso Reyes No 1000, 66200 San Nicolas De Los Garza, Nuevo León.
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-sm-6 mb-5">
+          
+          <h2 class="font-weight-bold mb-4">HORARIO</h2>
+          <ul class="list-unstyled">
+            
+            <li class="mb-2">Lunes: 9:00 – 19:00</li>
+            
+            <li class="mb-2">Martes: 9:00 – 19:00</li>
+            
+            <li class="mb-2">Miercoles: 9:00 – 19:00</li>
+            
+            <li class="mb-2">Jueves: 9:00 – 19:00</li>
+            
+            <li class="mb-2">Viernes: 9:00 – 19:00</li>
+            
+            <li class="mb-2">Sabado: 9:00 – 19:00</li>
+            
+            <li class="mb-2">Domingo: 9:00 – 19:00</li>
+            
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center ">
+      <div class="col-lg-8">
+        <h2 class="font-weight-bold mb-4">¿Tienes Dudas? Compartelas en Nuestro Foro</h2>
+
+      <form class="d-flex flex-column mb-3" id="newComent" action="/submit" method="post">
+          <% if (locals.nameUser) {%>
+            <textarea class="p-2 mb-3" name="autor" required rows="1"><%-nameUser%></textarea>
+            <%} else {%>
+            <input class="p-2 mb-3" type="text" name="autor" placeholder="Autor" required>
+            <%} %>
+          <input class="p-2 mb-3" type="text" name="correoContacto" placeholder="Correo Electronico" required>
+          <textarea class="p-2 mb-3" name="contenido" placeholder="Contenido" required rows="5"></textarea>
+          <button class="btn btn-main btn-main-sm" type="submit">Enviar</button>
+      </form>
+      
+      <% if (locals.comentarios) {%>
+          <ul>
+        <% comentarios.forEach(comentario=> { %>
+          <li class="card mb-3 p-3">
+            <h2>
+              <%=comentario.autor%>
+            </h2>
+            <small>
+              <%=comentario.date %>
+            </small>
+            <p>
+              <%=comentario.correo%>
+            </p>
+            <p>
+              <%=comentario.contenido%>
+            </p>
+          </li>
+          <% }); %>
+      </ul>
+      <%}%>
+      </div>
+    </div>
+  </section>
+  
+<%-include("footer.ejs") %>

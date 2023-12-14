@@ -1,0 +1,21 @@
+<%-include("header.ejs")%>
+<section class="section">
+  <div class="container">
+    <form action="/createUser" method="post" class="px-4 py-3">
+        <div class="mb-3">
+            <label class="form-label">Nombre Completo</label>
+            <input type="text" name="registerName" class="form-control" id="exampleDropdownFormEmail1" placeholder="Ingresa tu nombre">
+          </div>
+        <div class="mb-3">
+          <label class="form-label">Correo Electrónico</label>
+          <input type="email" name="registerEmail" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@ejemplo.com">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Constraseña</label>
+          <input type="password" name="registerPassword" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn bg-orange">Registrar</button>
+      </form>
+  </div>
+</section>
+<%-include("footer.ejs") %>
