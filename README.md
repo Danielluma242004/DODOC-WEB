@@ -3,7 +3,7 @@
 Esta es una página web desarrollada en el entorno de NodeJS, utlizando las siguientes tecnologías:
 -Lenguaje de Programación : JavaScript
 -FrontEnd : CSS, Bootstrap
--BackEnd : NodeJS, ExpressJS, NextJS
+-BackEnd : NodeJS, ExpressJS
 -Database: PostgreSQL
 
 ## Autor -
